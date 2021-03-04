@@ -7,7 +7,7 @@ defmodule NervesEnvironmentSensor.Worker do
 
   require Logger
 
-  @default_interval :timer.minutes(1)
+  @default_interval :timer.seconds(1)
 
   def start_link(opts \\ []), do: GenServer.start_link(__MODULE__, opts, name: __MODULE__)
   def whereis, do: Process.whereis(__MODULE__)
